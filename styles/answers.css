@@ -1,0 +1,20 @@
+#all-answers-container {
+    padding: 1rem;
+    font-size: 110%;
+
+    & h3 {
+        font-weight: bold;
+    }
+
+    & h4 {
+        font-size: 60%;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .answer-section {
+        margin-top: 1rem;
+        margin-bottom: .25rem;
+        color: #7b7b7b;
+    }
+}

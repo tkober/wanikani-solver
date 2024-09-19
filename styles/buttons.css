@@ -1,0 +1,29 @@
+/*a.solve-button {*/
+/*    background-color: #f44336;*/
+/*    color: white;*/
+/*    padding: 5px 15px;*/
+/*    text-align: center;*/
+/*    text-decoration: none;*/
+/*    position: absolute;*/
+/*    top: 8px;*/
+/*    right: 20px;*/
+/*    font-weight: normal;*/
+/*    cursor: pointer;*/
+/*}*/
+
+
+a.solve-button:link, a.solve-button:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    position: absolute;
+    top: 8px;
+    right: 20px;
+    cursor: pointer;
+}
+
+a.solve-button:hover, a.solve-button:active {
+    background-color: red;
+}
