@@ -118,15 +118,15 @@ function listAllKanjiReadings(subject) {
     for (let reading of subject['data']['readings']) {
         // accepted_answer
         if (reading['type'] === 'onyomi') {
-            onyomiContainer.appendChild(Answer(reading['reading'] + onyomiContainer.children.length > 0))
+            onyomiContainer.appendChild(Answer(reading['reading'], onyomiContainer.children.length > 0))
         }
 
         if (reading['type'] === 'kunyomi') {
-            kunyomiContainer.appendChild(Answer(reading['reading'] + kunyomiContainer.children.length > 0))
+            kunyomiContainer.appendChild(Answer(reading['reading'], kunyomiContainer.children.length > 0))
         }
 
         if (reading['type'] === 'nanori') {
-            nanoriContainer.appendChild(Answer(reading['reading'] + nanoriContainer.children.length > 0))
+            nanoriContainer.appendChild(Answer(reading['reading'], nanoriContainer.children.length > 0))
         }
     }
 
