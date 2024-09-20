@@ -1,4 +1,5 @@
 addSolveButton();
+setUpOnReviewChange();
 
 document.addEventListener('keydown', e => {
     if (e.ctrlKey && e.key === 's') {
@@ -6,6 +7,21 @@ document.addEventListener('keydown', e => {
         onSolveButtonPressed();
     }
 });
+
+function setUpOnReviewChange() {
+    const targetElement = document.querySelector('.character-header__content');
+    const config = {
+        attributes: true,
+        childList: true,
+        subtree: true,
+        characterData: true,
+    };
+
+    const observer = new MutationObserver(() => {
+        removeExistingAnswers();
+    });
+    observer.observe(targetElement, config);
+}
 
 function addSolveButton() {
     const elements = document.getElementsByClassName('quiz-input__question-type-container');
@@ -163,8 +179,10 @@ function fillAnswerContainerIfEmpty(container) {
 }
 
 function removeExistingAnswers() {
+    console.log('removeExistingAnswers()')
     const element = document.getElementById('all-answers-container');
     if (element) {
+        console.log('>>remove');
         element.remove();
     }
 }
