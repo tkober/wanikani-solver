@@ -28,7 +28,7 @@ function addSolveButton() {
     if (elements.length === 0) {
         return;
     }
-
+    
     elements.item(0).appendChild(Button('>> Solve', onSolveButtonPressed))
 }
 
